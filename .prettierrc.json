@@ -2,7 +2,6 @@
   "printWidth": 80,
   "singleQuote": true,
   "arrowParens": "avoid",
-  "parser": "typescript",
   "semi": true,
   "useTabs": false,
   "trailingComma": "all",
