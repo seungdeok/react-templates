@@ -17,8 +17,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - name: Run Lint
-        uses: ./.github/actions/lint.yml
-        if: ${{ success() }}
+      - name: Install Packages
+        run: npm install
+      - name: Eslint
+        run: npm run eslint
       - name: Test
         run: npm run test:all
