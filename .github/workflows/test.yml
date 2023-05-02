@@ -1,4 +1,4 @@
-name: Lint
+name: Test
 
 on: [push, pull_request]
 
@@ -17,5 +17,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - name: Eslint
-        run: npm run eslint
+      - name: Run Lint
+        uses: ./.github/workflows/lint.yml
+        if: ${{ success() }}
+      - name: Test
+        run: npm run test:all
