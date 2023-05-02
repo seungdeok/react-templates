@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+      - name: Install Packages
+        run: npm install
       - name: Eslint
         run: npm run eslint
       - name: Test
