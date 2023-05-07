@@ -1,8 +1,6 @@
-export const HOME = '/';
-const ERROR_404 = '/notfound';
+export const ROUTE_PATH = {
+  HOME: '/',
+  ERROR_404: '/notfound',
+} as const;
 
-const routePath = {
-  ERROR_404,
-};
-
-export default routePath;
+export type ROUTE_PATH = (typeof ROUTE_PATH)[keyof typeof ROUTE_PATH];

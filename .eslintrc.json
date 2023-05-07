@@ -24,8 +24,8 @@
       }
     ],
     // add rules
-    "import/prefer-default-export": 0, // 함수가 1개 일때도 export 허용
-    "import/no-extraneous-dependencies": 0 // 테스트 및 개발 환경일 때 devDependencies 허용
+    "import/prefer-default-export": 0, // allow export
+    "import/no-extraneous-dependencies": 0 // allow devDependencies
   },
   "settings": {
     "import/parsers": {
