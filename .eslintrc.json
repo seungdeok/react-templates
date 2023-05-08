@@ -22,7 +22,11 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    // add rules
+    "import/prefer-default-export": 0, // allow export
+    "import/no-extraneous-dependencies": 0, // allow devDependencies
+    "no-param-reassign": ["error", { "props": false }] // allow slice state reassign
   },
   "settings": {
     "import/parsers": {
