@@ -19,7 +19,9 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"]
-    }
+    },
+    // set emotion
+    "jsxImportSource": "@emotion/react"
   },
   "include": ["src"]
 }
