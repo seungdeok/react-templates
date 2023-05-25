@@ -51,7 +51,9 @@ describe('useCountDown', () => {
 
     expect(getByTestId(TEXT_TEST_ID).textContent).toBe('10');
 
-    userEvent.click(getByTestId(BUTTON1_TEST_ID));
+    await act(() => {
+      userEvent.click(getByTestId(BUTTON1_TEST_ID));
+    });
 
     await act(() => {
       jest.advanceTimersByTime(2000);
